@@ -1,5 +1,11 @@
 # VitalSync Platform
+![Status](https://img.shields.io/badge/status-demo-blue)
+![Architecture](https://img.shields.io/badge/architecture-MVC-orange)
+![Tech](https://img.shields.io/badge/PHP-dashboard-green)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 Healthcare Interoperability & Operational Oversight Demo
+
 
 VitalSync is a demonstration platform that simulates operational monitoring and interoperability workflows within healthcare systems. The project showcases how technical dashboards and system health monitoring tools can provide visibility into integrations between clinical systems and external APIs.
 
@@ -7,8 +13,26 @@ This project was developed as part of a technical portfolio to demonstrate conce
 
 ---
 
+## Table of Contents
+
+- [Live Demo](#live-demo)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Platform Architecture](#platform-architecture)
+- [Data Simulation & Interoperability Model](#data-simulation--interoperability-model)
+- [Dashboard Views](#dashboard-views)
+- [Data Model](#data-model)
+- [Design System](#design-system)
+- [Technologies Used](#technologies-used)
+- [Purpose of the Project](#purpose-of-the-project)
+- [Author](#author)
+- [License](#license)
+
+---
+
 ## Live Demo
 https://vitalsync.smarterspec.tech/
+Demo credentials are not required. All platform functionality is simulated for demonstration purposes.
 
 ---
 
@@ -22,39 +46,28 @@ https://vitalsync.smarterspec.tech/
 
 ---
 
+## System Architecture
+
+![Architecture Diagram](docs/architecture/architecture-diagram.png)
+
+The VitalSync platform follows a lightweight MVC architecture. Controller manages application logic, including request handling and determine which dashboard view should be displayed. The model interacts with internal data stores and simulated integrations, including database queries and system health checks. The views are responsible for presenting the dashboard interface and visualizing operational monitoring data.
+
+---
+
 ## Platform Architecture
 
 VitalSync follows a lightweight MVC-style structure:
 public/
-Application entry point and public assets
+  Application entry point and public assets
 
 app/
-controllers/ → request handling and application logic
-models/ → data queries and system health checks
-views/ → dashboard UI templates
-views/layout/ → reusable UI components
+  controllers/ → request handling and application logic
+  models/ → data queries and system health checks
+  views/ → dashboard UI templates
+  views/layout/ → reusable UI components
 
 docs/
-project & architecture documentation
-
-
----
-
-## Technologies Used
-
-- PHP
-- HTML
-- CSS
-- SQL (MySQL)
-- REST API integration concepts
-
----
-
-## Purpose of the Project
-
-VitalSync demonstrates how operational platforms can provide visibility into system integrations and data workflows.
-
-The platform simulates environments where organizations must monitor system health, synchronization status, and integration performance across multiple services.
+  project & architecture documentation
 
 ---
 
@@ -116,7 +129,26 @@ Key principles include:
 - Consistent card spacing and grid layout
 - Neutral color palette for operational dashboards
 - Status indicators for system health monitoring
+- Responsive layouts designed for desktop, tablet, and mobile devices
 - Responsive grid layouts for KPI cards and tables
+
+---
+
+## Technologies Used
+
+- PHP (MVC-style application structure)
+- MySQL relational database
+- HTML / CSS responsive UI
+- REST API integration (FHIR R4)
+- HL7 integration log simulation
+
+---
+
+## Purpose of the Project
+
+VitalSync demonstrates how operational platforms can provide visibility into system integrations and data workflows.
+
+The platform simulates environments where organizations must monitor system health, synchronization status, and integration performance across multiple services.
 
 ---
 
