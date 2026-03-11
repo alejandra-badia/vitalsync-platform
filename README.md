@@ -3,6 +3,10 @@
 ![Architecture](https://img.shields.io/badge/architecture-MVC-orange)
 ![Tech](https://img.shields.io/badge/PHP-dashboard-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![PHP](https://img.shields.io/badge/PHP-Backend-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![FHIR API](https://img.shields.io/badge/FHIR-Healthcare%20API-green)
+![HL7](https://img.shields.io/badge/HL7-Integration-lightgrey)
 
 Healthcare Interoperability & Operational Oversight Demo
 
