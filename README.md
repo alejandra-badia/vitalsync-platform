@@ -102,13 +102,13 @@ This architecture highlights how operational platforms often integrate data acro
 
 ## Dashboard Views
 
-| Home Dashboard | Clinical View |
+| Clinical Dashboard | PM Oversight |
 |----------------|---------------|
-| ![](docs/screenshots/dashboard-home.png) | ![](docs/screenshots/dashboard-clinical.png) |
+| ![](docs/screenshots/dashboard-clinical.png) | ![](docs/screenshots/dashboard-pm.png) |
 
-| Integration Monitoring | PM Oversight |
+| Integration Reporting | Research Dashboard |
 |-----------------------|--------------|
-| ![](docs/screenshots/dashboard-integration.png) | ![](docs/screenshots/dashboard-pm.png) |
+| ![](docs/screenshots/dashboard-integration.png) | ![](docs/screenshots/dashboard-research.png) |
 
 ---
 
@@ -149,6 +149,26 @@ Key principles include:
 VitalSync demonstrates how operational platforms can provide visibility into system integrations and data workflows.
 
 The platform simulates environments where organizations must monitor system health, synchronization status, and integration performance across multiple services.
+
+---
+
+## Project Status
+
+VitalSync is an actively evolving portfolio project designed to demonstrate concepts in operational platforms, interoperability monitoring, and healthcare system integrations.
+
+Current version focuses on:
+
+- Simulated healthcare data interoperability workflows
+- Operational dashboards for system health monitoring
+- Integration status tracking and message monitoring
+- Lightweight MVC architecture for modular application structure
+
+Future improvements may include:
+
+- Expanded dashboard analytics
+- Enhanced API integration examples
+- Authentication and user roles
+- Additional interoperability scenarios
 
 ---
 
