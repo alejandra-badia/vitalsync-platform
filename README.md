@@ -8,10 +8,9 @@
 
 Healthcare Interoperability & Operational Oversight Demo
 
+VitalSync is a platform that models how systems monitor data flows, integration health, and interoperability across distributed environments.
 
-VitalSync is a demonstration platform that simulates operational monitoring and interoperability workflows within healthcare systems. The project showcases how technical dashboards and system health monitoring tools can provide visibility into integrations between clinical systems and external APIs.
-
-This project was developed as part of a technical portfolio to demonstrate concepts in operational platforms, data monitoring, and interoperability oversight.
+It focuses on a core system challenge: providing visibility into how data moves across multiple systems, including transactional sources, integration layers, and reporting outputs.
 
 ---
 
@@ -26,6 +25,7 @@ This project was developed as part of a technical portfolio to demonstrate conce
 - [Data Model](#data-model)
 - [Design System](#design-system)
 - [Technologies Used](#technologies-used)
+- [System Relevance](#system-relevance)
 - [Purpose of the Project](#purpose-of-the-project)
 - [Author](#author)
 - [License](#license)
@@ -45,6 +45,7 @@ Demo credentials are not required. All platform functionality is simulated for d
 - Integration and synchronization status tracking
 - Simulated interoperability workflows
 - Clinical, project management, and integration reporting views
+- End-to-end visibility across simulated data pipelines and system interactions
 
 ---
 
@@ -52,7 +53,10 @@ Demo credentials are not required. All platform functionality is simulated for d
 
 ![Architecture Diagram](docs/architecture/architecture-diagram.png)
 
-The VitalSync platform follows a lightweight MVC architecture. Controller manages application logic, including request handling and determine which dashboard view should be displayed. The model interacts with internal data stores and simulated integrations, including database queries and system health checks. The views are responsible for presenting the dashboard interface and visualizing operational monitoring data.
+The VitalSync platform follows a lightweight MVC architecture. The Controller manages application logic and request handling, coordinating between data models and dashboard views.
+
+The Model interacts with internal data stores and simulated integrations, including database queries and system health checks.
+The View layer presents dashboards and visualizes system behavior and integration status.
 
 ---
 
@@ -146,17 +150,26 @@ Key principles include:
 
 ---
 
+## System Relevance
+
+VitalSync models how real-world systems handle:
+- Data movement across multiple layers (transactional, integration, reporting)
+- Monitoring of system health and message flows
+- Visibility into failures, delays, and synchronization issues
+
+These are core requirements in environments where reliability, traceability, and system observability are critical.
+
+---
+
 ## Purpose of the Project
 
-VitalSync demonstrates how operational platforms can provide visibility into system integrations and data workflows.
+This project demonstrates how systems provide visibility into data flows, integration health, and system reliability across multiple services.
 
-The platform simulates environments where organizations must monitor system health, synchronization status, and integration performance across multiple services.
+It models how fragmented data sources can be unified into observable, traceable workflows, enabling better monitoring and operational decision-making.
 
 ---
 
 ## Project Status
-
-VitalSync is an actively evolving portfolio project designed to demonstrate concepts in operational platforms, interoperability monitoring, and healthcare system integrations.
 
 Current version focuses on:
 
