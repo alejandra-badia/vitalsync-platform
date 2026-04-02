@@ -116,54 +116,72 @@ class DashboardController {
 
     private function runFhirResearchIngestion() {
 
-    $url = "https://hapi.fhir.org/baseR4/Observation?code=8867-4&_count=20";
+        $url = "https://hapi.fhir.org/baseR4/Observation?code=8867-4&_count=20";
 
-    $start = microtime(true);
-    $response = @file_get_contents($url);
-    $latency = round((microtime(true) - $start) * 1000);
+        $start = microtime(true);
+        $response = @file_get_contents($url);
+        $latency = round((microtime(true) - $start) * 1000);
 
-    if (!$response) {
-        return ['success' => false];
+        if (!$response) {
+        return [
+            'success' => false,
+            'latency' => $latency,
+            'count' => 0,
+            'avg' => 0,
+            'min' => 0,
+            'max' => 0,
+            'values' => [],
+            'std_dev' => 0
+        ];
     }
 
-    $data = json_decode($response, true);
+        $data = json_decode($response, true);
 
-    $heartRates = [];
+        $heartRates = [];
 
-    foreach ($data['entry'] ?? [] as $entry) {
-        $value = $entry['resource']['valueQuantity']['value'] ?? null;
-        if ($value) {
-            $heartRates[] = $value;
+        foreach ($data['entry'] ?? [] as $entry) {
+            $value = $entry['resource']['valueQuantity']['value'] ?? null;
+            if ($value) {
+                $heartRates[] = $value;
+            }
         }
-    }
 
-    if (empty($heartRates)) {
-        return ['success' => false];
-    }
+        if (empty($heartRates)) {
+            return [
+                'success' => false,
+                'latency' => $latency,
+                'count' => 0,
+                'avg' => 0,
+                'min' => 0,
+                'max' => 0,
+                'values' => [],
+                'std_dev' => 0
+            ];
+        }
 
-    //TRANSFORM
-    $count = count($heartRates);
-    $avg = round(array_sum($heartRates) / $count, 2);
-    $min = min($heartRates);
-    $max = max($heartRates);
-    $stdDev = round($this->calculateStandardDeviation($heartRates), 2);
+        //TRANSFORM
+        $count = count($heartRates);
+        $avg = round(array_sum($heartRates) / $count, 2);
+        $min = min($heartRates);
+        $max = max($heartRates);
+        $stdDev = round($this->calculateStandardDeviation($heartRates), 2);
 
-    // LOAD (raw storage)
-    $ingestionId = $this->model->insertFhirRaw($data, $count, $latency);
+        // LOAD (raw storage)
+        $ingestionId = $this->model->insertFhirRaw($data, $count, $latency);
 
-    // LOAD/STORE SUMMARY)
-    $this->model->insertFhirSummary($ingestionId, $avg, $min, $max, $count);
+        // LOAD/STORE SUMMARY)
+        $this->model->insertFhirSummary($ingestionId, $avg, $min, $max, $count);
 
-    return [
-        'success' => true,
-        'count' => $count,
-        'avg' => $avg,
-        'min' => $min,
-        'max' => $max,
-        'latency' => $latency,
-        'values' => $heartRates,
-        'std_dev' => $stdDev,
-    ];
+        return [
+            'success' => true,
+            'count' => $count,
+            'avg' => $avg,
+            'min' => $min,
+            'max' => $max,
+            'latency' => $latency,
+            'values' => $heartRates,
+            'std_dev' => $stdDev,
+        ];
     }
 
     private function calculateStandardDeviation($array) {
