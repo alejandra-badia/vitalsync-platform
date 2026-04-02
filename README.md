@@ -18,6 +18,7 @@ It focuses on a core system challenge: providing visibility into how data moves 
 
 - [Live Demo](#live-demo)
 - [Key Features](#key-features)
+- [System Health Metrics](#system-health-metrics)
 - [System Architecture](#system-architecture)
 - [Platform Architecture](#platform-architecture)
 - [Data Simulation & Interoperability Model](#data-simulation--interoperability-model)
@@ -46,6 +47,19 @@ Demo credentials are not required. All platform functionality is simulated for d
 - Simulated interoperability workflows
 - Clinical, project management, and integration reporting views
 - End-to-end visibility across simulated data pipelines and system interactions
+
+---
+
+## System Health Metrics
+
+VitalSync includes KPI-based system health indicators to simulate real-world monitoring thresholds. Dashboard metrics dynamically change state based on predefined ranges:
+
+HL7 Sync Success Rate
+Failed Messages (24h)
+Mean Sync Time
+API Response Time (FHIR)
+
+Each metric is categorized into healthy, warning, and critical states, enabling quick identification of system performance issues.
 
 ---
 
