@@ -89,9 +89,23 @@ docs/
   project & architecture documentation
 
 ---
+## Data Model Design
+Designed a relational schema with separation between:
+- transactional data (patients)
+- event logs (system_logs, fhir_logs)
+- reporting layer (patient_sync_summary)
+
+Implemented denormalized reporting table to support fast KPI dashboards.
+Structured system to support:
+- event tracking (HL7-style logs)
+- auditability (FHIR payload storage)
+- performance monitoring (response time, retries)
+
+Applied read-model separation pattern (CQRS-style) for scalable reporting.
+
+---
 
 ## Data Simulation & Interoperability Model
-
 VitalSync simulates a multi-system healthcare environment where operational dashboards must monitor data coming from different sources.
 
 The platform demonstrates three common data patterns found in healthcare and enterprise systems:
