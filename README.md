@@ -53,11 +53,10 @@ Demo credentials are not required. All platform functionality is simulated for d
 ## System Health Metrics
 
 VitalSync includes KPI-based system health indicators to simulate real-world monitoring thresholds. Dashboard metrics dynamically change state based on predefined ranges:
-
-HL7 Sync Success Rate
-Failed Messages (24h)
-Mean Sync Time
-API Response Time (FHIR)
+- HL7 Sync Success Rate
+- Failed Messages (24h)
+- Mean Sync Time
+- API Response Time (FHIR)
 
 Each metric is categorized into healthy, warning, and critical states, enabling quick identification of system performance issues.
 
