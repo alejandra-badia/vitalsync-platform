@@ -64,7 +64,7 @@ Each metric is categorized into healthy, warning, and critical states, enabling 
 
 ## System Architecture
 
-![Architecture Diagram](docs/architecture/architecture-diagram.png)
+![Architecture Diagram](docs/03)architecture/architecture-diagram.png)
 
 The VitalSync platform follows a lightweight MVC architecture. The Controller manages application logic and request handling, coordinating between data models and dashboard views.
 
@@ -122,17 +122,17 @@ This architecture highlights how operational platforms often integrate data acro
 
 | Clinical Dashboard | PM Oversight |
 |----------------|---------------|
-| ![](docs/screenshots/dashboard-clinical.png) | ![](docs/screenshots/dashboard-pm.png) |
+| ![](docs/05_screenshots/dashboard-clinical.png) | ![](docs/05_screenshots/dashboard-pm.png) |
 
 | Integration Reporting | Research Dashboard |
 |-----------------------|--------------|
-| ![](docs/screenshots/dashboard-integration.png) | ![](docs/screenshots/dashboard-research.png) |
+| ![](docs/05_screenshots/dashboard-integration.png) | ![](docs/05_screenshots/dashboard-research.png) |
 
 ---
 
 ## Data Model
 
-![ER Diagram](docs/architecture/er-diagram.png)
+![ER Diagram](docs/03_architecture/er-diagram.png)
 
 The platform uses a relational database to simulate core hospital system data, including patients, encounters, and monitoring metrics used by the operational dashboard. The relational schema was designed with separation between:
 - transactional data (patients)
