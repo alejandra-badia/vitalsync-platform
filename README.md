@@ -64,7 +64,7 @@ Each metric is categorized into healthy, warning, and critical states, enabling 
 
 ## System Architecture
 
-![Architecture Diagram](docs/03)architecture/architecture-diagram.png)
+![Architecture Diagram](docs/03_architecture/architecture-diagram.png)
 
 The VitalSync platform follows a lightweight MVC architecture. The Controller manages application logic and request handling, coordinating between data models and dashboard views.
 
