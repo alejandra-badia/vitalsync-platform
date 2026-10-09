@@ -1,4 +1,4 @@
-# VitalSync Platform
+# VitalSync Healthcare Interoperability Platform
 ![Status](https://img.shields.io/badge/status-demo-blue)
 ![Architecture](https://img.shields.io/badge/architecture-MVC-orange)
 ![Backend](https://img.shields.io/badge/backend-PHP-blue)
